@@ -5,3 +5,11 @@ require_relative('./models/film.rb')
 require_relative('./models/ticket.rb')
 
 also_reload('./models/*')
+
+
+get '/films' do
+
+  @films = Film.all()
+  erb (:index)
+
+end
